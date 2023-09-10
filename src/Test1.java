@@ -1,13 +1,18 @@
 public class Test1 {
     public static void main(String[] args) {
-        double b = 5;
-        int c = 5;
-        double a = b % c;
-        System.out.println(a);
-        System.out.println(chekOstatok(5,5));
+
+        Test_chek itog = new Test_chek();
+        System.out.println(itog.chekOstatok(8.5, 2));
+
+        Test_Math ABS = new Test_Math();
+        System.out.println(ABS.doubleExpression(2, 3, 5));
+
+        System.out.println(0x0bp3);
+
+
+        Test_calcCircleRadius R = new Test_calcCircleRadius();
+        Test_calcCircleRadius.calcCircleRadius(123);
+
     }
 
-    public static double chekOstatok(double a, int b) {
-        return a % b;
-    }
 }
