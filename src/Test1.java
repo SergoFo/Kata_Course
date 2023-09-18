@@ -1,12 +1,15 @@
 public class Test1 {
     public static void main(String[] args) {
 
-        Test_chek itog = new Test_chek();
+        chek_1_2_7 itog = new chek_1_2_7();
         System.out.println(itog.chekOstatok(8.5, 2));
 
-        Test_Math ABS = new Test_Math();
+        Math_1_2_10 ABS = new Math_1_2_10();
         System.out.println(ABS.doubleExpression(2, 3, 5));
 
+
+
+/*
         System.out.println(0x0bp3);
         char c1 = 92;
         System.out.println(c1);
@@ -14,17 +17,22 @@ public class Test1 {
 
         char ch = '\'';
         System.out.println(ch);
+*/
 
 
 
-        Test_calcCircleRadius R = new Test_calcCircleRadius();
-        Test_calcCircleRadius.calcCircleRadius(123);
+        calcCircleRadius_1_2_13 R = new calcCircleRadius_1_2_13();
+        calcCircleRadius_1_2_13.calcCircleRadius(123);
+        System.out.println();
 
-        Test_BigInteger Big = new Test_BigInteger();
-        Test_BigInteger.maxLongSqr();
+        BigInteger_1_2_14 Big = new BigInteger_1_2_14();
+        BigInteger_1_2_14.maxLongSqr();
 
-        Test_charExpression ch5 = new Test_charExpression();
-        System.out.println(Test_charExpression.charExpression(1));
+        charExpression_1_3_2 ch5 = new charExpression_1_3_2();
+        System.out.println(charExpression_1_3_2.charExpression(1));
+
+        getAgeDiff_1_3_3 difference = new getAgeDiff_1_3_3();
+        System.out.println(getAgeDiff_1_3_3.getAgeDiff((byte) 2, (byte) 5));
 
 
 
