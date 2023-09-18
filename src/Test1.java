@@ -34,6 +34,15 @@ public class Test1 {
         getAgeDiff_1_3_3 difference = new getAgeDiff_1_3_3();
         System.out.println(getAgeDiff_1_3_3.getAgeDiff((byte) 2, (byte) 5));
 
+/*
+        int number = -1234;
+        String str = String.format("%d", number);
+        System.out.println("With format method: string = " + str);
+*/
+
+        isPowerOfTwo_1_3_8 degree = new isPowerOfTwo_1_3_8();
+        System.out.println(isPowerOfTwo_1_3_8.isPowerOfTwo(-2));
+
 
 
 
