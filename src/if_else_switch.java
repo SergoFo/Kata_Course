@@ -15,11 +15,11 @@ public class if_else_switch {
 
 
         // Конструкция switch
-        int num = 8;
+        int num = 8;    // Типы данных: byte, short, char, int, String, Byte, Short, Character, Integer. (Enum) - перечесление.
         switch(num) {
             case 1:
                 System.out.println("число равно 1");
-                break; // остановка, чтобы не шел код дальше
+                break;                                    // остановка, чтобы не шел код дальше
             case 8:
                 System.out.println("число равно 8");
                 num++;
@@ -27,7 +27,7 @@ public class if_else_switch {
             case 9:
                 System.out.println("число равно 9");
                 break;
-            default:
+            default:                                      // при отсутствии совпадений выполнится default
                 System.out.println("число не равно 1, 8, 9");
         }
 

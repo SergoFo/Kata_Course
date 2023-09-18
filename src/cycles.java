@@ -40,6 +40,14 @@ public class cycles {
         System.out.println();
 
 
+        for (int i = 0; i < 15; i++) {
+            if (i == 5)
+                continue;       //Перейти к след итерации, пропустить 5    //break; - выйти из цикла после 5
+            System.out.println(i);
+        }
+
+
+        System.out.println();
 
 
 
