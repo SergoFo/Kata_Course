@@ -1,4 +1,4 @@
-public class Test2 {
+public class if_else_switch {
     public static void main(String[] args) {
 
 
