@@ -44,6 +44,9 @@ public class Test1 {
         System.out.println(isPowerOfTwo_1_3_8.isPowerOfTwo(-2));
 
 
+        BigInteger_factorial_1_4_7 fac = new BigInteger_factorial_1_4_7();
+        System.out.println(BigInteger_factorial_1_4_7.factorial(3));
+
 
 
 
