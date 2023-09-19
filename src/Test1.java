@@ -62,6 +62,9 @@ public class Test1 {
         System.out.println(checkWeekend_1_4_12.checkWeekend("Saturday"));
 
 
+
+
+
     }
 
 }
