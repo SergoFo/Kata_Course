@@ -62,7 +62,7 @@ public class Test1 {
         System.out.println(checkWeekend_1_4_12.checkWeekend("Saturday"));
 
         printArray_1_5_3 pr = new printArray_1_5_3();
-        printArray_1_5_3.printArray(new int[]{1, 2, 3, 4, 5, 5});
+        printArray_1_5_3.printArray(new int[]{1, 2, 3, 4, 5, 5, 6, 7, 7});
 
 
 
