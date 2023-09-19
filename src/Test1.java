@@ -52,7 +52,8 @@ public class Test1 {
         determineGroup_1_4_9 det = new determineGroup_1_4_9();
         System.out.println(det.determineGroup(17));
 
-
+        isWeekend_1_4_10 wek = new isWeekend_1_4_10();
+        System.out.println(isWeekend_1_4_10.isWeekend("Saturday"));
 
 
 
