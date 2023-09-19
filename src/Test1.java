@@ -43,9 +43,15 @@ public class Test1 {
         isPowerOfTwo_1_3_8 degree = new isPowerOfTwo_1_3_8();
         System.out.println(isPowerOfTwo_1_3_8.isPowerOfTwo(-2));
 
-
         BigInteger_factorial_1_4_7 fac = new BigInteger_factorial_1_4_7();
         System.out.println(BigInteger_factorial_1_4_7.factorial(3));
+
+        BigInteger_factorial_1_4_8 fac1 = new BigInteger_factorial_1_4_8();
+        System.out.println(BigInteger_factorial_1_4_8.factorial(4));
+
+
+
+
 
 
 
