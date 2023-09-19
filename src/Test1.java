@@ -61,8 +61,8 @@ public class Test1 {
         checkWeekend_1_4_12 wek2 = new checkWeekend_1_4_12();
         System.out.println(checkWeekend_1_4_12.checkWeekend("Saturday"));
 
-
-
+        printArray_1_5_3 pr = new printArray_1_5_3();
+        printArray_1_5_3.printArray(new int[]{1, 2, 3, 4, 5, 5});
 
 
     }
