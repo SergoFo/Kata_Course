@@ -58,7 +58,8 @@ public class Test1 {
         isWeekend_1_4_11 wek1 = new isWeekend_1_4_11();
         System.out.println(isWeekend_1_4_11.isWeekend("Sunday"));
 
-
+        checkWeekend_1_4_12 wek2 = new checkWeekend_1_4_12();
+        System.out.println(checkWeekend_1_4_12.checkWeekend("Saturday"));
 
 
     }
