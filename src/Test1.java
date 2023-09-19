@@ -49,6 +49,8 @@ public class Test1 {
         BigInteger_factorial_1_4_8 fac1 = new BigInteger_factorial_1_4_8();
         System.out.println(BigInteger_factorial_1_4_8.factorial(4));
 
+        determineGroup_1_4_9 det = new determineGroup_1_4_9();
+        System.out.println(det.determineGroup(17));
 
 
 
