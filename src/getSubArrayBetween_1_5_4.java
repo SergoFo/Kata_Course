@@ -10,13 +10,13 @@ public class getSubArrayBetween_1_5_4 {
                 elementsCount++;
             }
         }
-        System.out.println(elementsCount);
+//        System.out.println(elementsCount);    // Проверка сколько элементов
 
 //Индекс для вставки, точка отсчета
         int indexToInsert = 0;
 
 //Фикс массива
-        int[] result = new int[elementsCount];       //Подмассив с количеством элементов elementsCount
+        int[] result = new int[elementsCount];       // Подмассив с количеством элементов elementsCount
 
 //Вставляем
         System.out.print("[");
