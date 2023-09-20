@@ -20,7 +20,6 @@ public class Test1 {
 */
 
 
-
         calcCircleRadius_1_2_13 R = new calcCircleRadius_1_2_13();
         calcCircleRadius_1_2_13.calcCircleRadius(123);
         System.out.println();
@@ -68,7 +67,6 @@ public class Test1 {
         getSubArrayBetween_1_5_4.getSubArrayBetween(new int[]{1, 3, 5, 6, 9, 11, 24}, 4, 10);
 
 
-
-        }
+    }
 
 }
