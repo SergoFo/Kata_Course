@@ -64,8 +64,11 @@ public class Test1 {
         printArray_1_5_3 pr = new printArray_1_5_3();
         printArray_1_5_3.printArray(new int[]{1, 2, 3, 4, 5, 5, 6, 7, 7});
 
+        getSubArrayBetween_1_5_4 sub = new getSubArrayBetween_1_5_4();
+        getSubArrayBetween_1_5_4.getSubArrayBetween(new int[]{1, 3, 5, 6, 9, 11, 24}, 4, 10);
 
 
-    }
+
+        }
 
 }
