@@ -66,6 +66,9 @@ public class Test1 {
         getSubArrayBetween_1_5_4 sub = new getSubArrayBetween_1_5_4();
         getSubArrayBetween_1_5_4.getSubArrayBetween(new int[]{1, 3, 5, 6, 9, 11, 24}, 4, 10);
 
+        getArrayMiddle_1_5_5 arr = new getArrayMiddle_1_5_5();
+        getArrayMiddle_1_5_5.getArrayMiddle(new int[]{1, 5, 2, 17});
+
 
     }
 
