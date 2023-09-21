@@ -75,6 +75,9 @@ public class Test1 {
         mergeAndSort_1_5_7 merge = new mergeAndSort_1_5_7();
         mergeAndSort_1_5_7.mergeAndSort(new int[]{1, 3, 7, 5}, new int[]{8, 4, 2, 4});
 
+        printArray_1_5_9 pA = new printArray_1_5_9();
+        printArray_1_5_9.printArray(new int[] {1, 2, 3, 4, 5, 5, 6, 7, 7});
+
 
     }
 }
