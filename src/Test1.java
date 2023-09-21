@@ -72,8 +72,8 @@ public class Test1 {
         inverseArray_1_5_6 inv = new inverseArray_1_5_6();
         inverseArray_1_5_6.inverseArray(new int[]{1, 4, 6, 7});
 
-
-
+        mergeAndSort_1_5_7 merge = new mergeAndSort_1_5_7();
+        mergeAndSort_1_5_7.mergeAndSort(new int[]{1, 3, 7, 5}, new int[]{8, 4, 2, 4});
 
 
     }
