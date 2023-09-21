@@ -69,7 +69,12 @@ public class Test1 {
         getArrayMiddle_1_5_5 arr = new getArrayMiddle_1_5_5();
         getArrayMiddle_1_5_5.getArrayMiddle(new int[]{1, 5, 2, 17});
 
+        inverseArray_1_5_6 inv = new inverseArray_1_5_6();
+        inverseArray_1_5_6.inverseArray(new int[]{1, 4, 6, 7});
+
+
+
+
 
     }
-
 }
