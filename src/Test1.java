@@ -81,6 +81,8 @@ public class Test1 {
         getArrayMiddle_1_5_10 get = new getArrayMiddle_1_5_10();
         getArrayMiddle_1_5_10.getArrayMiddle(new int[]{1, 5, 2, 17, 18});
 
+        mergeAndSort_1_5_11 mer = new mergeAndSort_1_5_11();
+        mergeAndSort_1_5_11.mergeAndSort(new int[]{1, 3, 7, 5}, new int[]{8, 4, 2, 4});
 
     }
 }
