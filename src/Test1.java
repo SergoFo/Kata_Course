@@ -87,6 +87,7 @@ public class Test1 {
         printOddNumbers_1_5_12 print = new printOddNumbers_1_5_12();
         printOddNumbers_1_5_12.printOddNumbers(new int[]{3, 5, 20, 8, 7, 3, 100});
 
-
+        parseAndPrintNumber_1_6_8 parse = new parseAndPrintNumber_1_6_8();
+        parse.parseAndPrintNumber("1200");
     }
 }
