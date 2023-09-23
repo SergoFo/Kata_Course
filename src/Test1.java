@@ -89,5 +89,10 @@ public class Test1 {
 
         parseAndPrintNumber_1_6_8 parse = new parseAndPrintNumber_1_6_8();
         parse.parseAndPrintNumber("1200");
+
+        isPalindrome_1_6_9 pal = new isPalindrome_1_6_9();
+        isPalindrome_1_6_9.isPalindrome("Was it a cat I saw?");
+
+
     }
 }
