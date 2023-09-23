@@ -84,5 +84,9 @@ public class Test1 {
         mergeAndSort_1_5_11 mer = new mergeAndSort_1_5_11();
         mergeAndSort_1_5_11.mergeAndSort(new int[]{1, 3, 7, 5}, new int[]{8, 4, 2, 4});
 
+        printOddNumbers_1_5_12 print = new printOddNumbers_1_5_12();
+        printOddNumbers_1_5_12.printOddNumbers(new int[]{3, 5, 20, 8, 7, 3, 100});
+
+
     }
 }
