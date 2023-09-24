@@ -93,6 +93,9 @@ public class Test1 {
         isPalindrome_1_6_9 pal = new isPalindrome_1_6_9();
         isPalindrome_1_6_9.isPalindrome("Was it a cat I saw?");
 
+        parseAndSqrt_1_6_10 sqr = new parseAndSqrt_1_6_10();
+        sqr.parseAndSqrt("64");
+
 
     }
 }
