@@ -96,6 +96,9 @@ public class Test1 {
         parseAndSqrt_1_6_10 sqr = new parseAndSqrt_1_6_10();
         sqr.parseAndSqrt("64");
 
+        isGmailOrOutlook_1_6_11 mail = new isGmailOrOutlook_1_6_11();
+        isGmailOrOutlook_1_6_11.isGmailOrOutlook("@outlook.com");
+
 
     }
 }
