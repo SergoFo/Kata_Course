@@ -99,6 +99,17 @@ public class Test1 {
         isGmailOrOutlook_1_6_11 mail = new isGmailOrOutlook_1_6_11();
         isGmailOrOutlook_1_6_11.isGmailOrOutlook("@outlook.com");
 
+        printTextPerRole_1_6_12 PerRole = new printTextPerRole_1_6_12();
+        String[] roles = new String[]{"Городничий", "Аммос Федорович", "Артемий Филиппович", "Лука Лукич"};
+        String[] textLines = new String[]{
+                "Городничий: Я пригласил вас, господа, с тем, чтобы сообщить вам пренеприятное известие: к нам едет ревизор.",
+                "Аммос Федорович: Как ревизор?",
+                "Артемий Филиппович: Как ревизор?",
+                "Городничий: Ревизор из Петербурга, инкогнито. И еще с секретным предписаньем.",
+                "Аммос Федорович: Вот те на!",
+                "Артемий Филиппович: Вот не было заботы, так подай!",
+                "Лука Лукич: Господи боже! еще и с секретным предписаньем!"};
+        printTextPerRole_1_6_12.printTextPerRole(roles, textLines);
 
     }
 }
