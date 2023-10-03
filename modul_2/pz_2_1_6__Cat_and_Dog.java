@@ -1,4 +1,4 @@
-public class pz_2_1_6 {
+public class pz_2_1_6__Cat_and_Dog {
     public static void main(String[] args) {
         Cat cat = new Cat();
         Dog dog = new Dog();

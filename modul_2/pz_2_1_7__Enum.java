@@ -1,4 +1,4 @@
-public class pz_2_1_7 {
+public class pz_2_1_7__Enum {
     public static void main(String[] args) {
         Day current = Day.SUNDAY;
         System.out.println(current.isWeekend());
