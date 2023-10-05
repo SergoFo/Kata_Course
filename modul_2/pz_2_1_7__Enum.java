@@ -14,7 +14,7 @@ public class pz_2_1_7__Enum {
         SUNDAY("Воскресенье");
         private final String name;
 
-        Day(String name) {
+        Day(String name) {           // Конструктор
             this.name = name;
         }
 
