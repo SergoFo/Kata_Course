@@ -15,7 +15,7 @@ public class Robot_code {
     }
 
     public static class Robot {
-                                      // Объявляем переменные внутри класса Robot
+        // Объявляем переменные внутри класса Robot
         int x;                        // Координата x
         int y;                        // Координата y
         Direction dir;                // Направление взгляда
@@ -79,22 +79,22 @@ public class Robot_code {
     }
 
     public static void moveRobot(Robot robot, int toX, int toY) {
-        int stepX = Math.abs(toX - robot.x);
-        int stepY = Math.abs(toY - robot.y);
+        int stepX = Math.abs(toX - robot.getX());
+        int stepY = Math.abs(toY - robot.getY());
         System.out.println("Количество шагов: x = " + stepX + "," + " y = " + stepY);
         System.out.println("Точка назначения: toX = " + toX + " и toY = " + toY);
         System.out.println("Точка старта: x = " + robot.getX() + " и y = " + robot.getY());
 
         // Разворачиваем взгляд робот наверх UP (по Y)
         System.out.println();
-        while (Direction.UP != robot.dir) {
+        while (Direction.UP != robot.getDirection()) {
             robot.turnLeft();
         }
-        System.out.println("Я смотрю наверх: " + robot.dir);
+        System.out.println("Я смотрю наверх: " + robot.getDirection());
 
 
         if (robot.getY() < toY) {
-            for (int i = 0; i < stepY; i++ ) {
+            for (int i = 0; i < stepY; i++) {
                 robot.stepForward();
             }
             System.out.println("Я пришел в точку: toY = " + robot.getY());
@@ -104,24 +104,21 @@ public class Robot_code {
             for (int i = 0; i < stepY; i++) {
                 robot.stepForward();
             }
-            System.out.println("Я смотрю вниз: " + robot.dir);
+            System.out.println("Я смотрю вниз: " + robot.getDirection());
             System.out.println("Я пришел в точку: toY = " + robot.getY());
         }
         System.out.println();
 
 
-
-
-
         // Разворачиваем взгляд робот направо RIGHT (по X)
-        while (Direction.RIGHT != robot.dir) {
+        while (Direction.RIGHT != robot.getDirection()) {
             robot.turnLeft();
         }
-        System.out.println("Я смотрю направо: " + robot.dir);
+        System.out.println("Я смотрю направо: " + robot.getDirection());
 
 
         if (robot.getX() < toX) {
-            for (int i = 0; i < stepX; i++ ) {
+            for (int i = 0; i < stepX; i++) {
                 robot.stepForward();
             }
             System.out.println("Я пришел в точку: toX = " + robot.getX());
@@ -131,7 +128,7 @@ public class Robot_code {
             for (int i = 0; i < stepX; i++) {
                 robot.stepForward();
             }
-            System.out.println("Я смотрю налево: " + robot.dir);
+            System.out.println("Я смотрю налево: " + robot.getDirection());
             System.out.println("Я пришел в точку: toX = " + robot.getX());
         }
 
