@@ -3,8 +3,8 @@ import java.util.Arrays;
 
 public class Robot_code {
     public static void main(String[] args) {
-        Robot robot = new Robot(0, 0, Direction.DOWN);
-        moveRobot(robot, -10, 20);
+        Robot robot = new Robot(30, 10, Direction.DOWN);
+        moveRobot(robot, 5, -15);
     }
 
     public enum Direction {            // Направление взгляда робота через перечесление
@@ -79,6 +79,62 @@ public class Robot_code {
     }
 
     public static void moveRobot(Robot robot, int toX, int toY) {
+        int stepX = Math.abs(toX - robot.x);
+        int stepY = Math.abs(toY - robot.y);
+        System.out.println("Количество шагов: x = " + stepX + "," + " y = " + stepY);
+        System.out.println("Точка назначения: toX = " + toX + " и toY = " + toY);
+        System.out.println("Точка старта: x = " + robot.getX() + " и y = " + robot.getY());
+
+        // Разворачиваем взгляд робот наверх UP (по Y)
+        System.out.println();
+        while (Direction.UP != robot.dir) {
+            robot.turnLeft();
+        }
+        System.out.println("Я смотрю наверх: " + robot.dir);
+
+
+        if (robot.getY() < toY) {
+            for (int i = 0; i < stepY; i++ ) {
+                robot.stepForward();
+            }
+            System.out.println("Я пришел в точку: toY = " + robot.getY());
+        } else {
+            robot.turnRight();
+            robot.turnRight();
+            for (int i = 0; i < stepY; i++) {
+                robot.stepForward();
+            }
+            System.out.println("Я смотрю вниз: " + robot.dir);
+            System.out.println("Я пришел в точку: toY = " + robot.getY());
+        }
+        System.out.println();
+
+
+
+
+
+        // Разворачиваем взгляд робот направо RIGHT (по X)
+        while (Direction.RIGHT != robot.dir) {
+            robot.turnLeft();
+        }
+        System.out.println("Я смотрю направо: " + robot.dir);
+
+
+        if (robot.getX() < toX) {
+            for (int i = 0; i < stepX; i++ ) {
+                robot.stepForward();
+            }
+            System.out.println("Я пришел в точку: toX = " + robot.getX());
+        } else {
+            robot.turnRight();
+            robot.turnRight();
+            for (int i = 0; i < stepX; i++) {
+                robot.stepForward();
+            }
+            System.out.println("Я смотрю налево: " + robot.dir);
+            System.out.println("Я пришел в точку: toX = " + robot.getX());
+        }
+
         // your code
     }
 }
