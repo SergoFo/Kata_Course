@@ -1,7 +1,4 @@
-import java.math.*;
-import java.util.Arrays;
-
-public class Robot_code {
+public class pz_2_1_8__Robot_code {
     public static void main(String[] args) {
         Robot robot = new Robot(30, 10, Direction.DOWN);
         moveRobot(robot, 5, -15);
