@@ -1,4 +1,4 @@
-public class pz_2_2_7__Security_question {
+public class pz_2_2_7__Control_question {
     public static void main(String[] args) {
         int minFromFour = getMinFromFour(14, 11, 10, 15);
         System.out.println(minFromFour);
