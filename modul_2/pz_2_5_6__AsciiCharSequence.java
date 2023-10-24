@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class pz_2_5_6__AsciiCharSequence {
     public static void main(String[] args) {
         byte[] example = {72, 101, 108, 108, 111, 33};
@@ -14,6 +12,7 @@ public class pz_2_5_6__AsciiCharSequence {
         example[0] = 74;
         System.out.println(answer.toString()); //Hello
     }
+
     public static class AsciiCharSequence implements CharSequence {
         byte[] example;
 
@@ -29,7 +28,7 @@ public class pz_2_5_6__AsciiCharSequence {
         @Override
         public char charAt(int index) {
             return (char) (example[index]);
-                }
+        }
 
         @Override
         public CharSequence subSequence(int start, int end) {
@@ -45,6 +44,5 @@ public class pz_2_5_6__AsciiCharSequence {
         public String toString() {
             return new String(example);
         }
-
     }
 }
