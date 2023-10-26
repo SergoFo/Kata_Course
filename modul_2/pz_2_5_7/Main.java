@@ -1,41 +1,39 @@
-/*
-import java.awt.*;
+package pz_2_5_7;
 
-public class pz_2_5_7__Label_checkLabels {
-    // тесты
+public class Main {
     public static void main(String[] args) {
         // инициализация анализаторов для проверки в порядке данного набора анализаторов
-        String[] spamKeywords = {"spam", "bad"};
-        int commentMaxLength = 40;
+        String[] Keywords = {"spam", "bad"};
+        int MaxLength = 4;
         TextAnalyzer[] textAnalyzers1 = {
-                new SpamAnalyzer(spamKeywords),
+                new SpamAnalyzer(Keywords),
                 new NegativeTextAnalyzer(),
-                new TooLongTextAnalyzer(commentMaxLength)
+                new TooLongTextAnalyzer(MaxLength)
         };
         TextAnalyzer[] textAnalyzers2 = {
-                new SpamAnalyzer(spamKeywords),
-                new TooLongTextAnalyzer(commentMaxLength),
+                new SpamAnalyzer(Keywords),
+                new TooLongTextAnalyzer(MaxLength),
                 new NegativeTextAnalyzer()
         };
         TextAnalyzer[] textAnalyzers3 = {
-                new TooLongTextAnalyzer(commentMaxLength),
-                new SpamAnalyzer(spamKeywords),
+                new TooLongTextAnalyzer(MaxLength),
+                new SpamAnalyzer(Keywords),
                 new NegativeTextAnalyzer()
         };
         TextAnalyzer[] textAnalyzers4 = {
-                new TooLongTextAnalyzer(commentMaxLength),
+                new TooLongTextAnalyzer(MaxLength),
                 new NegativeTextAnalyzer(),
-                new SpamAnalyzer(spamKeywords)
+                new SpamAnalyzer(Keywords)
         };
         TextAnalyzer[] textAnalyzers5 = {
                 new NegativeTextAnalyzer(),
-                new SpamAnalyzer(spamKeywords),
-                new TooLongTextAnalyzer(commentMaxLength)
+                new SpamAnalyzer(Keywords),
+                new TooLongTextAnalyzer(MaxLength)
         };
         TextAnalyzer[] textAnalyzers6 = {
                 new NegativeTextAnalyzer(),
-                new TooLongTextAnalyzer(commentMaxLength),
-                new SpamAnalyzer(spamKeywords)
+                new TooLongTextAnalyzer(MaxLength),
+                new SpamAnalyzer(Keywords)
         };
         // тестовые комментарии
         String[] tests = new String[8];
@@ -65,86 +63,18 @@ public class pz_2_5_7__Label_checkLabels {
         }
     }
 
-
-*/
-/*    Вот что должно появится на выходе :
-
-    test #0: This comment is so good.
-1: OK
-2: OK
-3: OK
-4: OK
-5: OK
-6: OK
-    test #1: This comment is so Loooooooooooooooooooooooooooong.
-1: TOO_LONG
-2: TOO_LONG
-3: TOO_LONG
-4: TOO_LONG
-5: TOO_LONG
-6: TOO_LONG
-    test #2: Very negative comment !!!!=(!!!!;
-1: NEGATIVE_TEXT
-2: NEGATIVE_TEXT
-3: NEGATIVE_TEXT
-4: NEGATIVE_TEXT
-5: NEGATIVE_TEXT
-6: NEGATIVE_TEXT
-    test #3: Very BAAAAAAAAAAAAAAAAAAAAAAAAD comment with :|;
-1: NEGATIVE_TEXT
-2: TOO_LONG
-3: TOO_LONG
-4: TOO_LONG
-5: NEGATIVE_TEXT
-6: NEGATIVE_TEXT
-    test #4: This comment is so bad....
-1: SPAM
-2: SPAM
-3: SPAM
-4: SPAM
-5: SPAM
-6: SPAM
-    test #5: The comment is a spam, maybeeeeeeeeeeeeeeeeeeeeee!
-1: SPAM
-2: SPAM
-3: TOO_LONG
-4: TOO_LONG
-5: SPAM
-6: TOO_LONG
-    test #6: Negative bad :( spam.
-1: SPAM
-2: SPAM
-3: SPAM
-4: NEGATIVE_TEXT
-5: NEGATIVE_TEXT
-6: NEGATIVE_TEXT
-    test #7: Very bad, very neg =(, very ..................
-1: SPAM
-2: SPAM
-3: TOO_LONG
-4: TOO_LONG
-5: NEGATIVE_TEXT
-6: NEGATIVE_TEXT*//*
-
-
-    interface TextAnalyzer {
-        Label processText(String text);
-    }
-    public static Label checkLabels(TextAnalyzer[] analyzers, String text) {
+    public Label checkLabels(TextAnalyzer[] analyzers, String text) {
+        //Последний штрих - написать метод checkLabels, который будет возвращать метку для комментария по набору анализаторов текста.
+        // checkLabels должен возвращать первую не-OK метку в порядке данного набора анализаторов, и OK, если все анализаторы вернули OK.
+        // Используйте, пожалуйста, самый открытый модификатор доступа для всех классов.
+        // В итоге, реализуйте классы KeywordAnalyzer, SpamAnalyzer, NegativeTextAnalyzer и TooLongTextAnalyzer и метод checkLabels.
+        // TextAnalyzer и Label уже подключены, лишние импорты вам не потребуются.
+        for (TextAnalyzer textAnalyzer1 : analyzers) {
+            Label result;
+            if ((result = textAnalyzer1.processText(text)) != Label.OK) {
+                return result;
+            }
+        }
         return Label.OK;
     }
-    abstract class KeywordAnalyzer implements TextAnalyzer {
-
-    }
-    public static class SpamAnalyzer extends KeywordAnalyzer {
-
-    }
-    public static class NegativeTextAnalyzer extends KeywordAnalyzer {
-
-    }
-    public static class TooLongTextAnalyzer implements TextAnalyzer{
-
-    }
-
 }
-*/
