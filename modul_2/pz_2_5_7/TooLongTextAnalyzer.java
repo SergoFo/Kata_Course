@@ -1,18 +1,18 @@
 package pz_2_5_7;
 
-class TooLongTextAnalyzer implements TextAnalyzer {
+public class TooLongTextAnalyzer implements TextAnalyzer {
     //TooLongTextAnalyzer должен конструироваться от int-а с максимальной допустимой длиной комментария.
     //Объект этого класса должен сохранять в своем состоянии это число в приватном поле maxLength.
 
-    private final int MaxLength;
+    private final int maxLength;
 
-    public TooLongTextAnalyzer(int commentMaxLength) {
-        this.MaxLength = commentMaxLength;
+    public TooLongTextAnalyzer(int maxLength) {
+        this.maxLength = maxLength;
     }
 
     @Override
     public Label processText(String text) {
-        if(text.length() < MaxLength){
+        if(text.length() < maxLength){
             return Label.OK;
         } else {
             return Label.TOO_LONG;

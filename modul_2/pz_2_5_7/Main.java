@@ -4,35 +4,35 @@ public class Main {
     public static void main(String[] args) {
         // инициализация анализаторов для проверки в порядке данного набора анализаторов
         String[] Keywords = {"spam", "bad"};
-        int MaxLength = 4;
+        int maxLength = 40;
         TextAnalyzer[] textAnalyzers1 = {
                 new SpamAnalyzer(Keywords),
                 new NegativeTextAnalyzer(),
-                new TooLongTextAnalyzer(MaxLength)
+                new TooLongTextAnalyzer(maxLength)
         };
         TextAnalyzer[] textAnalyzers2 = {
                 new SpamAnalyzer(Keywords),
-                new TooLongTextAnalyzer(MaxLength),
+                new TooLongTextAnalyzer(maxLength),
                 new NegativeTextAnalyzer()
         };
         TextAnalyzer[] textAnalyzers3 = {
-                new TooLongTextAnalyzer(MaxLength),
+                new TooLongTextAnalyzer(maxLength),
                 new SpamAnalyzer(Keywords),
                 new NegativeTextAnalyzer()
         };
         TextAnalyzer[] textAnalyzers4 = {
-                new TooLongTextAnalyzer(MaxLength),
+                new TooLongTextAnalyzer(maxLength),
                 new NegativeTextAnalyzer(),
                 new SpamAnalyzer(Keywords)
         };
         TextAnalyzer[] textAnalyzers5 = {
                 new NegativeTextAnalyzer(),
                 new SpamAnalyzer(Keywords),
-                new TooLongTextAnalyzer(MaxLength)
+                new TooLongTextAnalyzer(maxLength)
         };
         TextAnalyzer[] textAnalyzers6 = {
                 new NegativeTextAnalyzer(),
-                new TooLongTextAnalyzer(MaxLength),
+                new TooLongTextAnalyzer(maxLength),
                 new SpamAnalyzer(Keywords)
         };
         // тестовые комментарии
@@ -69,9 +69,9 @@ public class Main {
         // Используйте, пожалуйста, самый открытый модификатор доступа для всех классов.
         // В итоге, реализуйте классы KeywordAnalyzer, SpamAnalyzer, NegativeTextAnalyzer и TooLongTextAnalyzer и метод checkLabels.
         // TextAnalyzer и Label уже подключены, лишние импорты вам не потребуются.
-        for (TextAnalyzer textAnalyzer1 : analyzers) {
+        for (TextAnalyzer analyzer : analyzers) {
             Label result;
-            if ((result = textAnalyzer1.processText(text)) != Label.OK) {
+            if ((result = analyzer.processText(text)) != Label.OK) {
                 return result;
             }
         }
