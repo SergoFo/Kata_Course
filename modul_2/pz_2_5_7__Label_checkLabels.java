@@ -170,11 +170,10 @@ public class pz_2_5_7__Label_checkLabels {
     static class SpamAnalyzer extends KeywordAnalyzer {
 
         private final String[] keywords;
-        private final Label label;
+
 
         public SpamAnalyzer(String[] keywords) {
-            this.keywords = keywords.clone();
-            label = Label.SPAM;
+            this.keywords = keywords;
         }
 
         @Override
@@ -184,22 +183,13 @@ public class pz_2_5_7__Label_checkLabels {
 
         @Override
         protected Label getLabel() {
-            return label;
+            return Label.SPAM;
         }
     }
 
     static class NegativeTextAnalyzer extends KeywordAnalyzer {
 
-        private final String[] keywords;
-        private final Label label;
-
-        public NegativeTextAnalyzer() {
-            this.keywords = new String[3];
-            this.keywords[0] = ":(";
-            this.keywords[1] = "=(";
-            this.keywords[2] = ":|";
-            label = Label.NEGATIVE_TEXT;
-        }
+        private final String[] keywords = {":(", "=(", ":|"};
 
         @Override
         public String[] getKeywords() {
@@ -208,7 +198,7 @@ public class pz_2_5_7__Label_checkLabels {
 
         @Override
         public Label getLabel() {
-            return label;
+            return Label.NEGATIVE_TEXT;
         }
     }
 }
