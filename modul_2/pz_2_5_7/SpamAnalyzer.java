@@ -5,11 +5,10 @@ public class SpamAnalyzer extends KeywordAnalyzer {
     //Объект этого класса должен сохранять в своем состоянии этот массив строк в приватном поле keywords.
 
     private final String[] keywords;
-    private final Label label;
+
 
     public SpamAnalyzer(String[] keywords) {
-        this.keywords = keywords.clone();
-        label = Label.SPAM;
+        this.keywords = keywords;
     }
 
     @Override
@@ -19,6 +18,6 @@ public class SpamAnalyzer extends KeywordAnalyzer {
 
     @Override
     protected Label getLabel() {
-        return label;
+        return Label.SPAM;
     }
 }
