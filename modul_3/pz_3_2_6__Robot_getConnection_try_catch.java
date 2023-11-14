@@ -5,6 +5,7 @@ public class pz_3_2_6__Robot_getConnection_try_catch {
             try {
                 con = robotConnectionManager.getConnection();
                 con.moveRobotTo(2, 5);
+                break;
             } catch (RobotConnectionException o) {
                 if (i == 2) {
                     throw new RobotConnectionException("Exception после 3 попытки", o);
