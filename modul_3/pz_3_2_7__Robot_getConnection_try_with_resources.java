@@ -1,19 +1,12 @@
 public class pz_3_2_7__Robot_getConnection_try_with_resources {
     public static void moveRobot(RobotConnectionManager robotConnectionManager, int toX, int toY) {           // Устанавливает соединение с роботом
-        RobotConnection con = null;
         for (int i = 0; i < 3; i++) {
-            try {
-                con = robotConnectionManager.getConnection();
+            try (RobotConnection con = robotConnectionManager.getConnection()) {
                 con.moveRobotTo(2, 5);
-                break;
+                i = 4;
             } catch (RobotConnectionException o) {
                 if (i == 2) {
                     throw new RobotConnectionException("Exception после 3 попытки", o);
-                }
-            } finally {
-                try {
-                    con.close();
-                } catch (Throwable ignored) {
                 }
             }
         }
