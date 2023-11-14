@@ -1,7 +1,6 @@
 public class pz_3_2_6__Robot_getConnection_try_catch {
     public static void moveRobot(RobotConnectionManager robotConnectionManager, int toX, int toY) {           // Устанавливает соединение с роботом
         RobotConnection con = null;
-
         for (int i = 0; i < 3; i++) {
             try {
                 con = robotConnectionManager.getConnection();
