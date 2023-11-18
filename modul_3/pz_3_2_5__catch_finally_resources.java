@@ -1,6 +1,6 @@
 public class pz_3_2_5__catch_finally_resources {
     public static class Car implements AutoCloseable {
-        @Override
+
         public void close() {
             System.out.println("Машина закрывается...");
         }
