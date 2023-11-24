@@ -25,16 +25,16 @@ public class pz_4_4_6__deserializeAnimalArray {
                 ByteArrayInputStream input = new ByteArrayInputStream(data);
                 ObjectInputStream ois = new ObjectInputStream(input)) {
 
-            int animalCount = ois.readInt();
-            Animal[] animals = new Animal[animalCount];
+            int animalCount = ois.readInt(); //читаем из потока кол-во объектов в классе
+            Animal[] animals = new Animal[animalCount]; //создаем массив объектов
 
             for (int i = 0; i < animalCount; i++) {
-                animals[i] = (Animal) ois.readObject();
+                animals[i] = (Animal) ois.readObject(); //заполняем массив объектами
             }
 
-            return animals;
+            return animals; //возвращаем массив объектов
 
-        } catch (Exception e) {
+        } catch (Exception e) { //ловим и бросаем исключения
             throw new IllegalArgumentException(e);
         }
     }
@@ -42,21 +42,26 @@ public class pz_4_4_6__deserializeAnimalArray {
 
     public static void main(String[] args) throws IOException {
 
-        // создаем экземпляр класса с объектами
+        //создание экземпляра класса с объектами
         Animal[] intermediate = {new Animal("Dog"), new Animal("Cat"), new Animal("Mouse")};
         try (
+                //открываем поток вывода данных
                 ByteArrayOutputStream output = new ByteArrayOutputStream();
                 ObjectOutputStream oos = new ObjectOutputStream(output)) {
 
+        //записываем в поток количество объектов в классе
             oos.writeInt(intermediate.length);
-//            oos.writeObject(new Animal("Dog"));
-//            oos.writeObject(new Animal("Cat"));
-//            oos.writeObject(new Animal("Mouse"));
+
+            //Записываем объекты в поток вывода
             for (Animal animal : intermediate) {
                 oos.writeObject(animal);
             }
+
+            // Метод flush () используется, чтобы принудительно записать в целевой поток данные, которые могут кэшироваться в текущем потоке.
             output.flush();
+
             System.out.println(Arrays.toString(intermediate));
+            //восстанавливаем из потока объекты класса
             byte[] bArray = output.toByteArray();
             Animal[] animal = deserializeAnimalArray(bArray);
             System.out.println(Arrays.toString(animal));
