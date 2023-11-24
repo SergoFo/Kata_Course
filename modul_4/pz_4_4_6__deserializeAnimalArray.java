@@ -10,6 +10,10 @@ public class pz_4_4_6__deserializeAnimalArray {
             this.name = name;
         }
 
+        public String toString() {
+            return name;
+        }
+
         @Override
         public boolean equals(Object obj) {
             if (obj instanceof Animal) {
@@ -17,6 +21,7 @@ public class pz_4_4_6__deserializeAnimalArray {
             }
             return false;
         }
+
     }
 
     public static Animal[] deserializeAnimalArray(byte[] data) {
