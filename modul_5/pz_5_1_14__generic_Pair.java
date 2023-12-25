@@ -1,5 +1,4 @@
 import java.util.Objects;
-import java.util.function.Supplier;
 
 public class pz_5_1_14__generic_Pair {
     public static void main(String[] args) {
@@ -44,8 +43,12 @@ public class pz_5_1_14__generic_Pair {
 
         @Override
         public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
+            if (this == o) {
+                return true;
+            }
+            if (o == null || getClass() != o.getClass()) {
+                return false;
+            }
             Pair<?, ?> pair = (Pair<?, ?>) o;
             return Objects.equals(value, pair.value) && Objects.equals(val, pair.val);
         }
