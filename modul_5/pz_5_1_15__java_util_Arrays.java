@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class pz_5_1_15__java_util_Arrays {
     public static void main(String[] args) {
         DynamicArray<Integer> array = new DynamicArray<>();
@@ -26,8 +28,9 @@ public class pz_5_1_15__java_util_Arrays {
         System.out.println(array.size());
     }
 
-    public static class DynamicArray<T> {
+    /*public static class DynamicArray<T> {
         private T[] values;
+        T[] temp = values;
 
         public DynamicArray() {
             values = (T[]) new Object[0];
@@ -35,14 +38,14 @@ public class pz_5_1_15__java_util_Arrays {
 
 
         public void add(T el) {
-            T[] temp = values;                                                     // temp это указатель старого массива
+            T[] temp = values;                                                      // temp это указатель старого массива
             values = (T[]) new Object[temp.length + 1];                            // создаем новый массив с колличеством элементов +1
             System.arraycopy(temp, 0, values, 0, temp.length);       // откуда, с какого элемента, куда, с какого элемента, сколько элементов хотим скопировать
             values[values.length - 1] = el;                                        // в пустой конечный индекс добавляем элемент el
         }
 
         public void remove(int index) {
-            T[] temp = values;                                                     // temp это указатель старого массива
+            T[] temp = values;                                                    // temp это указатель старого массива
             values = (T[]) new Object[temp.length - 1];                            // создаем новый массив с колличеством элементов -1
             System.arraycopy(temp, 0, values, 0, index);              // откуда, с какого элемента, куда, с какого элемента, сколько элементов хотим скопировать
             int amountElemAfterIndex = temp.length - index - 1;                    // Количество элементов после индекса
@@ -59,6 +62,43 @@ public class pz_5_1_15__java_util_Arrays {
             return values[index];
         }
 
+        public int size() {
+            return values.length;
+        }
+    }*/
+
+
+
+
+    public static class DynamicArray<T> {
+        private T[] values = (T[]) new Object[10];
+        private int sizeIntLength;
+
+        public DynamicArray() {
+
+        }
+
+        public T get(int index) {
+            if (index < 0 && index >= sizeIntLength) {
+                throw new ArrayIndexOutOfBoundsException();
+            }
+            return values[index];
+        }
+
+        public void remove(int index) {
+            if (index >= sizeIntLength && index < 0) {
+                throw new ArrayIndexOutOfBoundsException();
+            }
+            System.arraycopy(values, index + 1, values, index, values.length - index - 1);
+            sizeIntLength--;
+        }
+
+        public void add(T el) {
+            if (sizeIntLength == values.length) {
+                values = Arrays.copyOf(values, values.length << 1);
+            }
+            values[sizeIntLength++] = el;
+        }
         public int size() {
             return values.length;
         }
