@@ -6,7 +6,7 @@ public class pz_6_1_11__ternaryOperator {
             Predicate<? super T> condition,
             Function<? super T, ? extends U> ifTrue,
             Function<? super T, ? extends U> ifFalse) {
-        return (x) -> condition.test(x) ? ifTrue.apply(x) : ifFalse.apply(x);
+        return x -> condition.test(x) ? ifTrue.apply(x) : ifFalse.apply(x);
     }
 
 
