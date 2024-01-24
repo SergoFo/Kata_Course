@@ -143,7 +143,9 @@ public class pz_6_2_14__Uspeshnyi_code {
             public V get(Object key) {
                 V temp = super.get(key);
                 try {
-                    if (temp == null) temp = (V) Collections.emptyList();
+                    if (temp == null) {
+                        temp = (V) Collections.emptyList();
+                    }
                 } catch (ClassCastException e) {
                 }
                 return temp;
@@ -176,7 +178,7 @@ public class pz_6_2_14__Uspeshnyi_code {
         }
     }
 
-    public static interface IMessage<T> {
+    public interface IMessage<T> {
         String getFrom();
 
         String getTo();
