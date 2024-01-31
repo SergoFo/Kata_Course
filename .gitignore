@@ -11,7 +11,7 @@
 .mtj.tmp/
 
 # InteleliJ IDEA
-.idea
+/.idea
 *.iml
 out
 
